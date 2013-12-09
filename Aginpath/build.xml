@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+ 
+<project name="runBatch" basedir="." default="runBatch">
+ 
+    <target name="runBatch">
+        <echo>Running batch file directly</echo>
+        <exec executable="main.bat">
+            <!-- <arg value="-p someParam" /> -->
+        </exec>
+ 
+        <echo>Running batch file using cmd</echo>
+        <exec executable="cmd">
+            <arg value="/c" />
+            <arg value="main.bat" />
+            <!-- <arg value="-p someParam" /> -->
+        </exec>
+    </target>
+</project>
